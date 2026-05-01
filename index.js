@@ -8,8 +8,11 @@ const pool = require('./db')
 
 const app = express()
 
+const cors = require('cors')
+
 app.use(cors({
-  origin: '*'
+  origin: '*',
+  credentials: true
 }))
 
 app.use(express.json())
